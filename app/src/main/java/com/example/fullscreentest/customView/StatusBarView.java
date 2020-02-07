@@ -1,5 +1,6 @@
 package com.example.fullscreentest.customView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -41,8 +42,8 @@ public class StatusBarView extends ConstraintLayout {
     }
 
     private void getAttr(AttributeSet attrs) {
-        TypedArray typedArray = getContext().
-                obtainStyledAttributes(attrs, R.styleable.StatusBar);
+        @SuppressLint("CustomViewStyleable")
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.StatusBar);
         int color = typedArray.getColor(R.styleable.StatusBar_customBackGroundColor,
                 ContextCompat.getColor(context, R.color.colorPrimary));
         viewStatusBar.setBackgroundColor(color);
@@ -68,7 +69,7 @@ public class StatusBarView extends ConstraintLayout {
             viewStatusBar.getLayoutParams().height = DeviceUtil.getStatusBarHeight(context);
             viewStatusBar.requestLayout();
 
-            Logger.d("StatusBarHeight is >>> " + DeviceUtil.getNavigationBarHeight(context));
+            Logger.d("StatusBarHeight is >>> " + DeviceUtil.getCustomNavigationBarHeight(context));
         }
     }
 }

@@ -49,9 +49,9 @@ public class NavigationBarView extends ConstraintLayout {
 
         if (view != null) {
             viewNavigationBar = view.findViewById(R.id.view_navigation_bar);
-            viewNavigationBar.getLayoutParams().height = DeviceUtil.getNavigationBarHeight(context);
+            viewNavigationBar.getLayoutParams().height = DeviceUtil.getCustomNavigationBarHeight(context);
             viewNavigationBar.requestLayout();
-            Logger.d("viewNavigationBar bar height is >>> " + DeviceUtil.getNavigationBarHeight(context));
+            Logger.d("viewNavigationBar bar height is >>> " + DeviceUtil.getCustomNavigationBarHeight(context));
 
         }
     }
