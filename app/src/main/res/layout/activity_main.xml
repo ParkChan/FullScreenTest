@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_test_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.example.fullscreentest.customView.StatusBarView
+        android:id="@+id/view_status_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:customBackGroundColor="#30000000"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tab_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/view_navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibt_tab_home"
+            android:layout_width="24dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="22.6dp"
+            android:background="@drawable/ic_tab_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ibt_tab_search"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibt_tab_search"
+            android:layout_width="25.5dp"
+            android:layout_height="25.5dp"
+            android:background="@drawable/ic_tab_search"
+            app:layout_constraintBottom_toBottomOf="@id/ibt_tab_home"
+            app:layout_constraintEnd_toStartOf="@id/guide_center"
+            app:layout_constraintStart_toEndOf="@id/ibt_tab_home"
+            app:layout_constraintTop_toTopOf="@id/ibt_tab_home" />
+
+        <View
+            android:id="@+id/guide_center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/border_over_1dp_5151ff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibt_tab_menu"
+            android:layout_width="19.6dp"
+            android:layout_height="19.7dp"
+            android:background="@drawable/ic_tab_menu"
+            app:layout_constraintBottom_toBottomOf="@id/ibt_tab_home"
+            app:layout_constraintEnd_toStartOf="@id/ibt_tab_my"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/guide_center"
+            app:layout_constraintTop_toTopOf="@id/ibt_tab_home" />
+
+        <ImageButton
+            android:id="@+id/ibt_tab_my"
+            android:layout_width="20.9dp"
+            android:layout_height="22.1dp"
+            android:background="@drawable/ic_tab_my"
+            app:layout_constraintBottom_toBottomOf="@id/ibt_tab_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ibt_tab_menu"
+            app:layout_constraintTop_toTopOf="@id/ibt_tab_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.fullscreentest.customView.NavigationBarView
+        android:id="@+id/view_navigation_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

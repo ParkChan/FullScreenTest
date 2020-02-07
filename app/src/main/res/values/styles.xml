@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Status Bar 배경색 Background는 API 21부터-->
+        <!--<item name="android:statusBarColor">#D4ffffff</item>-->
+        <!--Status Bar 글자색깔 TextColor는 API 23부터-->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="StatusBarTextColorWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="StatusBarTextColorDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>
